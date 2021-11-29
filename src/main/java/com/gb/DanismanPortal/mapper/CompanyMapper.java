@@ -3,6 +3,7 @@ package com.gb.DanismanPortal.mapper;
 import com.gb.DanismanPortal.entity.Company;
 import com.gb.DanismanPortal.response.CompanyResponse;
 import com.gb.DanismanPortal.request.Company.CompanyAddRequest;
+import org.mapstruct.Mapper;
 
 import java.util.List;
 
