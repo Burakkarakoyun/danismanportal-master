@@ -45,6 +45,6 @@ public class Job {
     private LocalDate createTime;
 
     @Column(name = "end_time")
-    private LocalDate endDate;
+    private LocalDate endTime;
 
 }

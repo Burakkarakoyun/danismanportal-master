@@ -2,8 +2,10 @@ package com.gb.DanismanPortal.entity;
 
 import com.sun.istack.NotNull;
 import lombok.*;
+import org.apache.tomcat.jni.Local;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -11,7 +13,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "adress")
-public class Adress {
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
@@ -38,5 +40,12 @@ public class Adress {
 
     @Column(name = "zip_code")
     private String zipCode;     //posta kodu
+
+    @Column(name = "create_time")
+    private LocalDate create_time;
+
+    @Column(name = "end_time")
+    private LocalDate endTime;
+
 
 }
