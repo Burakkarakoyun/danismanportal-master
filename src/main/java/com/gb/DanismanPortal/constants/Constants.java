@@ -1,4 +1,4 @@
-package com.gb.DanismanPortal.Constants;
+package com.gb.DanismanPortal.constants;
 
 public class Constants {
     public final static String DELETED_SUCCESS_STATUS = "Silindi!" ;

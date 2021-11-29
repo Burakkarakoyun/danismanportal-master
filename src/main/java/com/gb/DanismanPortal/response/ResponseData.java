@@ -1,4 +1,4 @@
-package com.gb.DanismanPortal.reponse;
+package com.gb.DanismanPortal.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

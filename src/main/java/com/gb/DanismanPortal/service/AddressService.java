@@ -1,6 +1,6 @@
-package com.gb.DanismanPortal.services;
+package com.gb.DanismanPortal.service;
 
-import com.gb.DanismanPortal.reponse.AddressResponse;
+import com.gb.DanismanPortal.response.AddressResponse;
 import com.gb.DanismanPortal.request.Address.AdressAddRequest;
 import com.gb.DanismanPortal.request.Address.AdressUpdateRequest;
 
