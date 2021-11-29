@@ -1,11 +1,11 @@
-package com.gb.DanismanPortal.reponse;
+package com.gb.DanismanPortal.request.Job;
 
 import lombok.Data;
+
 import java.time.LocalDate;
 
 @Data
-public class JobResponse {
-    private int id;
+public class JobAddRequest {
     private String name;
     private String description;
     private double maxSalary;

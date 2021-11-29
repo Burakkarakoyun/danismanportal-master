@@ -1,10 +1,10 @@
-package com.gb.DanismanPortal.reponse;
+package com.gb.DanismanPortal.request.Company;
 
 import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class CompanyResponse {
+public class CompanyUpdateRequest {
     private int id;
     private String name;
     private String sector;

@@ -1,10 +1,11 @@
-package com.gb.DanismanPortal.reponse;
+package com.gb.DanismanPortal.request.Job;
 
 import lombok.Data;
+
 import java.time.LocalDate;
 
 @Data
-public class JobResponse {
+public class JobUpdateRequest {
     private int id;
     private String name;
     private String description;
