@@ -4,8 +4,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class AdressUpdateRequest {
-    private int id;
+public class AddressAddRequest {
     private String description;
     private String country;
     private String state;
