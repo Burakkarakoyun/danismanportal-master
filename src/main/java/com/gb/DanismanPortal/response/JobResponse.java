@@ -1,4 +1,4 @@
-package com.gb.DanismanPortal.reponse;
+package com.gb.DanismanPortal.response;
 
 import lombok.Data;
 import java.time.LocalDate;

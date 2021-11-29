@@ -1,6 +1,6 @@
-package com.gb.DanismanPortal.services;
+package com.gb.DanismanPortal.service;
 
-import com.gb.DanismanPortal.reponse.JobResponse;
+import com.gb.DanismanPortal.response.JobResponse;
 import com.gb.DanismanPortal.request.Job.JobAddRequest;
 import com.gb.DanismanPortal.request.Job.JobUpdateRequest;
 

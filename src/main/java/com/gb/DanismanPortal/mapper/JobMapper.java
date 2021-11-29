@@ -1,7 +1,7 @@
 package com.gb.DanismanPortal.mapper;
 
 import com.gb.DanismanPortal.entity.Job;
-import com.gb.DanismanPortal.reponse.JobResponse;
+import com.gb.DanismanPortal.response.JobResponse;
 import com.gb.DanismanPortal.request.Job.JobAddRequest;
 
 import java.util.List;

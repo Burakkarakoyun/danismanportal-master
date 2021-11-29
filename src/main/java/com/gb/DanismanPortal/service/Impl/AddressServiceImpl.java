@@ -1,13 +1,13 @@
-package com.gb.DanismanPortal.services.Impl;
+package com.gb.DanismanPortal.service.Impl;
 
 import com.gb.DanismanPortal.entity.Address;
 import com.gb.DanismanPortal.exception.ObjectNotFoundException;
 import com.gb.DanismanPortal.mapper.AddressMapper;
-import com.gb.DanismanPortal.reponse.AddressResponse;
+import com.gb.DanismanPortal.response.AddressResponse;
 import com.gb.DanismanPortal.repository.AddressRepository;
 import com.gb.DanismanPortal.request.Address.AdressAddRequest;
 import com.gb.DanismanPortal.request.Address.AdressUpdateRequest;
-import com.gb.DanismanPortal.services.AddressService;
+import com.gb.DanismanPortal.service.AddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
