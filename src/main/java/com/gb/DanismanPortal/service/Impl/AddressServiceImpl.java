@@ -5,8 +5,8 @@ import com.gb.DanismanPortal.exception.ObjectNotFoundException;
 import com.gb.DanismanPortal.mapper.AddressMapper;
 import com.gb.DanismanPortal.response.AddressResponse;
 import com.gb.DanismanPortal.repository.AddressRepository;
-import com.gb.DanismanPortal.request.Address.AdressAddRequest;
-import com.gb.DanismanPortal.request.Address.AdressUpdateRequest;
+import com.gb.DanismanPortal.request.Address.AddressAddRequest;
+import com.gb.DanismanPortal.request.Address.AddressUpdateRequest;
 import com.gb.DanismanPortal.service.AddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
@@ -30,17 +30,17 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public AddressResponse save(AdressAddRequest adressAddRequest) {
-        Address address = addressMapper.toAdress(adressAddRequest);
+    public AddressResponse save(AddressAddRequest addressAddRequest) {
+        Address address = addressMapper.toAddress(addressAddRequest);
         Address saved = addressRepository.save(address);
         return addressMapper.toAdressResponse(saved);
     }
 
     @Override
-    public AddressResponse update (AdressUpdateRequest adressUpdateRequest){
-        Optional<Address> adress = addressRepository.findById(adressUpdateRequest.getId());
+    public AddressResponse update (AddressUpdateRequest addressUpdateRequest){
+        Optional<Address> adress = addressRepository.findById(addressUpdateRequest.getId());
         if(adress.isPresent()){
-            BeanUtils.copyProperties(adressUpdateRequest, adress.get());
+            BeanUtils.copyProperties(addressUpdateRequest, adress.get());
             Address savedAddress = addressRepository.save(adress.get());
             return addressMapper.toAdressResponse(savedAddress);
         }
