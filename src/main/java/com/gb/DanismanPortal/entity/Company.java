@@ -1,4 +1,4 @@
-package com.gb.DanismanPortal.entities;
+package com.gb.DanismanPortal.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,8 +13,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "adress")
-public class Job {
+@Table(name = "company")
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -23,28 +23,33 @@ public class Job {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "max_salary")
-    private double maxSalary;
-
-    @Column(name = "min_salary")
-    private double minSalary;
-
     @Column(name = "sector")
     private String sector;
 
-    @Column(name = "company_id")
-    private String companyId;
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "adress_id")
     private String adressId;
+
+    @Column(name = "linkedin_username")
+    private String linkedinUsername;
+
+    @Column(name = "company_email")
+    private String companyEmail;
 
     @Column(name = "create_time")
     private LocalDate createTime;
 
     @Column(name = "end_time")
     private LocalDate endDate;
-
 }

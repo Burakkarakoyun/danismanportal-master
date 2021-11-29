@@ -1,4 +1,4 @@
-package com.gb.DanismanPortal.entities;
+package com.gb.DanismanPortal.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
