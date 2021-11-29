@@ -29,7 +29,6 @@ public class AddressController {
 
     @PostMapping
     public ResponseEntity<?> save(@RequestBody AddressAddRequest addressAddRequest){
-
         AddressResponse addressResponse = addressService.save(addressAddRequest);
         HttpResponseMessage message = new HttpResponseMessage.HttpResponseMessageBuilder()
                 .success(true)
