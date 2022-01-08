@@ -6,13 +6,13 @@ import java.time.LocalDate;
 
 @Data
 public class JobAddRequest {
-    private String name;
+    private String title;
     private String description;
-    private double maxSalary;
-    private double minSalary;
+    private double salary;
     private String sector;
+    private String experience;
     private String companyId;
-    private String adressId;
-    private LocalDate createTime;
+    private String addressId;
+    private LocalDate createTime = LocalDate.now();
     private LocalDate endTime;
 }

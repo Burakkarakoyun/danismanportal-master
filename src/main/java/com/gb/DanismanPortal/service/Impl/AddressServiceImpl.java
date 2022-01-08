@@ -25,8 +25,8 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public List<AddressResponse> listAll(){
         List<Address> addresses = addressRepository.findAll();
-        List<AddressResponse> addressRespons = addressMapper.toAdressResponseList(addresses);
-        return addressRespons;
+        List<AddressResponse> addressResponse = addressMapper.toAdressResponseList(addresses);
+        return addressResponse;
     }
 
     @Override

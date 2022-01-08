@@ -11,7 +11,7 @@ public class CompanyAddRequest {
     private String phoneNumber;
     private String email;
     private String password;
-    private String adressId;
+    private String addressId;
     private String linkedinUsername;
     private String companyEmail;
     private LocalDate createTime;
