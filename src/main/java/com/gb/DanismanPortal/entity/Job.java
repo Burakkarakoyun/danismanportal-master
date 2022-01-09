@@ -13,36 +13,36 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "adress")
+@Table(name = "job")
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "title")
+    private String title;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "max_salary")
-    private double maxSalary;
-
-    @Column(name = "min_salary")
-    private double minSalary;
+    @Column(name = "salary")
+    private double salary;
 
     @Column(name = "sector")
     private String sector;
 
+    @Column(name = "experience")
+    private String experience;
+
     @Column(name = "company_id")
     private String companyId;
 
-    @Column(name = "adress_id")
-    private String adressId;
+    @Column(name = "address_id")
+    private int addressId;
 
     @Column(name = "create_time")
-    private LocalDate createTime;
+    private LocalDate createTime = LocalDate.now();
 
     @Column(name = "end_time")
     private LocalDate endTime;

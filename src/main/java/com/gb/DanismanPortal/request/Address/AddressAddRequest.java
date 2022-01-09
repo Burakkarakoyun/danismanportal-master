@@ -12,6 +12,6 @@ public class AddressAddRequest {
     private String district;
     private String neighborhood;
     private String zipCode;
-    private LocalDate create_time;
+    private LocalDate create_time = LocalDate.now();
     private LocalDate endTime;
 }

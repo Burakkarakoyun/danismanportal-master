@@ -42,10 +42,8 @@ public class Address {
     private String zipCode;     //posta kodu
 
     @Column(name = "create_time")
-    private LocalDate create_time;
+    private LocalDate create_time = LocalDate.now() ;
 
     @Column(name = "end_time")
     private LocalDate endTime;
-
-
 }

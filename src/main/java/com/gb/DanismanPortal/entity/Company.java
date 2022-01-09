@@ -38,8 +38,8 @@ public class Company {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "adress_id")
-    private String adressId;
+    @Column(name = "address_id")
+    private String addressId;
 
     @Column(name = "linkedin_username")
     private String linkedinUsername;

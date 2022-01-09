@@ -7,13 +7,13 @@ import java.time.LocalDate;
 @Data
 public class JobUpdateRequest {
     private int id;
-    private String name;
+    private String title;
     private String description;
-    private double maxSalary;
-    private double minSalary;
+    private double salary;
     private String sector;
+    private String experience;
     private String companyId;
-    private String adressId;
+    private int addressId;
     private LocalDate createTime;
     private LocalDate endTime;
 }
