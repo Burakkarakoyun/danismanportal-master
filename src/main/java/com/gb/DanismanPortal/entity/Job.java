@@ -39,7 +39,7 @@ public class Job {
     private String companyId;
 
     @Column(name = "address_id")
-    private String addressId;
+    private int addressId;
 
     @Column(name = "create_time")
     private LocalDate createTime = LocalDate.now();

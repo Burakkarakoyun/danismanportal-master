@@ -12,7 +12,7 @@ public class JobAddRequest {
     private String sector;
     private String experience;
     private String companyId;
-    private String addressId;
+    private int addressId;
     private LocalDate createTime = LocalDate.now();
     private LocalDate endTime;
 }

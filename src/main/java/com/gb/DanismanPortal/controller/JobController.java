@@ -18,17 +18,16 @@ import java.util.List;
 @RequestMapping("/job")
 public class JobController {
     private final JobService jobService;
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public ResponseEntity<?> getAll(){
-        List<JobResponse> jobResponses = jobService.listAll();
-        HttpResponseMessage message = new HttpResponseMessage.HttpResponseMessageBuilder()
+         List<JobResponse> jobResponses = jobService.listAll();
+         HttpResponseMessage message = new HttpResponseMessage.HttpResponseMessageBuilder()
                 .success(true)
                 .items(jobResponses)
                 .build();
-        return new ResponseEntity<>(message, HttpStatus.OK);
+        return new ResponseEntity<>(jobResponses, HttpStatus.OK);
     }
-
     @PostMapping
     public ResponseEntity<?> save(@RequestBody JobAddRequest jobAddRequest){
         jobService.save(jobAddRequest);

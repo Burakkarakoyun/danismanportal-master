@@ -12,7 +12,7 @@ public class JobResponse {
     private String sector;
     private String experience;
     private String companyId;
-    private String addressId;
+    private int addressId;
     private LocalDate createTime;
     private LocalDate endTime;
 }

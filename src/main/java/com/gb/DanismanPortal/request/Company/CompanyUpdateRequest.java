@@ -12,7 +12,7 @@ public class CompanyUpdateRequest {
     private String phoneNumber;
     private String email;
     private String password;
-    private String addressId;
+    private int addressId;
     private String linkedinUsername;
     private String companyEmail;
     private LocalDate createTime;
