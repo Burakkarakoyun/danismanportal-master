@@ -11,7 +11,7 @@ public class JobAddRequest {
     private double salary;
     private String sector;
     private String experience;
-    private String companyId;
+    private int companyId;
     private int addressId;
     private LocalDate createTime = LocalDate.now();
     private LocalDate endTime;

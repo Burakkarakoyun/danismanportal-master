@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @ToString
 @Entity
 @Table(name = "company")
+@Where(clause = "end_time is null")
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,7 +41,7 @@ public class Company {
     private String password;
 
     @Column(name = "address_id")
-    private String addressId;
+    private int addressId;
 
     @Column(name = "linkedin_username")
     private String linkedinUsername;

@@ -1,9 +1,8 @@
 package com.gb.DanismanPortal.controller;
 
-import com.gb.DanismanPortal.request.Address.AddressAddRequest;
+import com.gb.DanismanPortal.constants.Constants;
 import com.gb.DanismanPortal.request.Job.JobAddRequest;
-import com.gb.DanismanPortal.response.AddressResponse;
-import com.gb.DanismanPortal.response.HttpResponseMessage;
+import com.gb.DanismanPortal.request.Job.JobUpdateRequest;
 import com.gb.DanismanPortal.response.JobResponse;
 import com.gb.DanismanPortal.service.JobService;
 import lombok.RequiredArgsConstructor;
@@ -18,22 +17,28 @@ import java.util.List;
 @RequestMapping("/job")
 public class JobController {
     private final JobService jobService;
+
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public ResponseEntity<?> getAll(){
          List<JobResponse> jobResponses = jobService.listAll();
-         HttpResponseMessage message = new HttpResponseMessage.HttpResponseMessageBuilder()
-                .success(true)
-                .items(jobResponses)
-                .build();
-        return new ResponseEntity<>(jobResponses, HttpStatus.OK);
+         return new ResponseEntity<>(jobResponses, HttpStatus.OK);
     }
     @PostMapping
     public ResponseEntity<?> save(@RequestBody JobAddRequest jobAddRequest){
         jobService.save(jobAddRequest);
-        HttpResponseMessage message = new HttpResponseMessage.HttpResponseMessageBuilder()
-                .success(true)
-                .build();
-        return new ResponseEntity<>(message, HttpStatus.OK);
+        return new ResponseEntity<>(Constants.SAVED_SUCCES_STATUS, HttpStatus.OK);
     }
+    @PutMapping
+    public ResponseEntity<?> update(@RequestBody JobUpdateRequest jobUpdateRequest){
+        jobService.update(jobUpdateRequest);
+        return new ResponseEntity<>(Constants.UPDATED_SUCCES_STATUS, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete (@PathVariable("id") int jobId){
+        jobService.delete(jobId);
+        return new ResponseEntity<>(Constants.DELETED_SUCCESS_STATUS, HttpStatus.OK);
+    }
+
 }

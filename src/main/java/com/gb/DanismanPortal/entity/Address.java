@@ -3,6 +3,7 @@ package com.gb.DanismanPortal.entity;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.apache.tomcat.jni.Local;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 @ToString
 @Entity
 @Table(name = "address")
+@Where(clause = "end_time is null")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -12,7 +12,7 @@ public class JobUpdateRequest {
     private double salary;
     private String sector;
     private String experience;
-    private String companyId;
+    private int companyId;
     private int addressId;
     private LocalDate createTime;
     private LocalDate endTime;
