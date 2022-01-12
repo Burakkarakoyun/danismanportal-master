@@ -14,6 +14,6 @@ public class JobUpdateRequest {
     private String experience;
     private int companyId;
     private int addressId;
-    private LocalDate createTime;
+    private LocalDate createTime = LocalDate.now();
     private LocalDate endTime;
 }
