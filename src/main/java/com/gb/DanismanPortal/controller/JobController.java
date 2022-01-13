@@ -36,7 +36,7 @@ public class JobController {
         jobService.update(jobUpdateRequest);
         return new ResponseEntity<>(Constants.UPDATED_SUCCES_STATUS, HttpStatus.OK);
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") int jobId){
         jobService.delete(jobId);
