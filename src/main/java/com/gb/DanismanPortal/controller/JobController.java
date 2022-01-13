@@ -24,17 +24,19 @@ public class JobController {
          List<JobResponse> jobResponses = jobService.listAll();
          return new ResponseEntity<>(jobResponses, HttpStatus.OK);
     }
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public ResponseEntity<?> save(@RequestBody JobAddRequest jobAddRequest){
         jobService.save(jobAddRequest);
         return new ResponseEntity<>(Constants.SAVED_SUCCES_STATUS, HttpStatus.OK);
     }
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public ResponseEntity<?> update(@RequestBody JobUpdateRequest jobUpdateRequest){
         jobService.update(jobUpdateRequest);
         return new ResponseEntity<>(Constants.UPDATED_SUCCES_STATUS, HttpStatus.OK);
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") int jobId){
         jobService.delete(jobId);
